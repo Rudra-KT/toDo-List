@@ -102,7 +102,7 @@ p{
     font-size: 1.1rem;
     margin: 20px auto;
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 6px 20px;
     background-color: rgba(255, 255, 255, 0.422);
     border: none;
 }
@@ -149,13 +149,13 @@ p{
 /* delete todo button */
 .delete-btn{
     margin-left: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 /* mark as done todo button */
 .done-btn{
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 .change-theme{
     position: absolute;
