@@ -2,23 +2,29 @@ document.querySelector(".btn").addEventListener("click", function() {
     document.querySelector("body").innerHTML=`
     <div>
     <h1> ToDo List ! </h1>
+    <button class="btn change-theme start-btn btn-lg btn-dark">Theme</button>
     <input class="inputStyle" type="text" name="todoName" id="todoName" placeholder="New Todo">
     <button class="btn btn-lg btn-dark" id="addToDo">Add todo</button>
-    <p class="ml-7"><i>( click on a todo to edit )</i></p>
+    <p class="how-to-edit ml-7"><i>( click on a todo to edit )</i></p>
     <ol id="todos"></ol>
     <div>
 `;
     document.querySelector("body").classList.add("appTheme");
     document.querySelector("#addToDo").addEventListener("click",addToDo);
     
-    // setTimeout(todoApp , 1 );
+    document.querySelector(".change-theme").addEventListener("click",function(){
+        changeTheme(this);
+    })
+
 });
 window.addEventListener("keydown" ,function(key){
     if(key.code=="Enter"){
         addToDo();
     }
 } )
-
+document.querySelector(".change-theme").addEventListener("click",function(){
+    changeTheme(this);
+})
 
 function addToDo() {
     const todosList = document.querySelector("#todos");
@@ -64,8 +70,14 @@ function addToDo() {
 
 function doneToDo(li){
     const todoText = li.querySelector("#todoText");
-    todoText.classList.toggle("removed");
+    const body = document.querySelector("body");
+    if(body.classList.contains("welcomePageLight")){
+        todoText.classList.toggle("removedLight");
+    }else{
+        todoText.classList.toggle("removedDark");
+    }
 }
+   
 
 function editTodo(todoText){
     const input = document.createElement("input");
@@ -91,6 +103,24 @@ function editTodo(todoText){
 
 function removeToDo(li){
     li.remove();
+}
+
+function changeTheme(themeButton){
+    const body = document.querySelector("body");
+    const buttons = document.querySelectorAll("button");
+
+    document.querySelectorAll("*").forEach(element => {
+        element.classList.toggle("lightText");
+    });
+
+    if(body.classList.contains("welcomePageLight")){
+        body.classList.remove("welcomePageLight");
+        body.classList.add("welcomePageDark");
+    }else{
+        body.classList.remove("welcomePageDark");
+        body.classList.add("welcomePageLight");
+    }
+    
 }
 
 
