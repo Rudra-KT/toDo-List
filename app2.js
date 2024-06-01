@@ -80,15 +80,23 @@ function doneToDo(li){
    
 
 function editTodo(todoText){
+    const body = document.querySelector("body");
     const input = document.createElement("input");
     input.value = todoText.textContent.trim(); 
     input.classList.add("edit-input","inputStyle"); 
     
+    if(body.classList.contains("welcomePageDark")){
+        input.classList.add("lightText");
+    }
+    if(body.classList.contains("welcomePageLight")){
+        input.classList.remove("lightText");
+    }
     todoText.innerHTML = ""; 
     todoText.appendChild(input); 
 
-    input.focus();
 
+    input.focus();
+    
     input.addEventListener("keydown",function(evt){
         if(evt.code==="Enter"){
             todoText.innerHTML=input.value;
@@ -110,23 +118,27 @@ function changeTheme(themeButton){
     const buttons = document.querySelectorAll("button");
     const todoText = document.querySelectorAll("#todoText");
 
-    document.querySelectorAll("*").forEach(element => {
-        element.classList.toggle("lightText");
-    });
+    // document.querySelectorAll("*").forEach(element => {
+    //     element.classList.toggle("lightText");
+    // });
 
     if(body.classList.contains("welcomePageLight")){
         body.classList.remove("welcomePageLight");
         body.classList.add("welcomePageDark");
         todoText.forEach(ele=>{
-            ele.classList.toggle("removedLight");
-            ele.classList.toggle("removedDark");
+            if(ele.classList.contains("removedLight") || ele.classList.contains("removedDark") ){
+                ele.classList.toggle("removedLight");
+                ele.classList.toggle("removedDark");
+            }
         });
     }else{
         body.classList.remove("welcomePageDark");
         body.classList.add("welcomePageLight");
         todoText.forEach(ele=>{
-            ele.classList.toggle("removedLight");
-            ele.classList.toggle("removedDark");
+            if(ele.classList.contains("removedLight") || ele.classList.contains("removedDark") ){
+                ele.classList.toggle("removedLight");
+                ele.classList.toggle("removedDark");
+            }
         });
     }
     
