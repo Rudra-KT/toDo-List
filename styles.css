@@ -14,7 +14,7 @@ body{
 h1{
     color:hwb(0 100% 0% / 0.961) ;
     font-weight: bold;
-    font-size: 2.7rem;
+    font-size: 2.2rem;
     font-family: 'Silkscreen', cursive;
 }
 
@@ -43,7 +43,7 @@ h1{
     margin: 70px auto; 
 }
 .randomMotivation>img{
-    width: 550px;
+    width: 500px;
     border: 5px solid white;
     margin-bottom: 20px;
 }
@@ -72,13 +72,14 @@ b{
 
 /* start todo app button */
 .start-btn{
+    font-size : 0.7rem ;
     margin-top: 30px;
 }
 
 p{
     font-family: 'Silkscreen', cursive;
     font-weight: bold;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     color: white;
 }
 .ml-7{
