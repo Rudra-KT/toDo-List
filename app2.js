@@ -118,9 +118,9 @@ function changeTheme(themeButton){
     const buttons = document.querySelectorAll("button");
     const todoText = document.querySelectorAll("#todoText");
 
-    // document.querySelectorAll("*").forEach(element => {
-    //     element.classList.toggle("lightText");
-    // });
+    document.querySelectorAll("input").forEach(element => {
+        element.classList.toggle("lightText");
+    });
 
     if(body.classList.contains("welcomePageLight")){
         body.classList.remove("welcomePageLight");
