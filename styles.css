@@ -14,7 +14,7 @@ body{
 h1{
     color:hwb(0 100% 0% / 0.961) ;
     font-weight: bold;
-    font-size: 3.2rem;
+    font-size: 2.2rem;
     font-family: 'Silkscreen', cursive;
 }
 
@@ -40,18 +40,18 @@ h1{
 /* welcome page image */
 .randomMotivation{
     text-align: center;
-    margin: 70px auto; 
+    margin:50px auto; 
 }
 .randomMotivation>img{
-    width: 650px;
+    width: 450px;
     border: 5px solid white;
     margin-bottom: 20px;
 }
 #memeText{
+    font-size: 1rem;
     font-family: 'Chakra Petch', sans-serif;
     color: white;
     text-align: center;
-    font-weight: bold;
 }
 #memeHeading{
     font-weight: bold;
@@ -78,7 +78,7 @@ b{
 p{
     font-family: 'Silkscreen', cursive;
     font-weight: bold;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: white;
 }
 .ml-7{
@@ -88,7 +88,7 @@ p{
 .inputStyle{
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     margin: 20px auto;
     border-radius: 30px;
     padding: 10px;
@@ -114,7 +114,7 @@ p{
 /* todo list styles */
 .todo-item {
     color: white;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     margin: 15px auto;
     display: flex;
     align-items: center;
@@ -135,13 +135,13 @@ p{
 /* delete todo button */
 .delete-btn{
     margin-left: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 /* mark as done todo button */
 .done-btn{
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 
