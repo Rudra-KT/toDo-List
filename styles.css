@@ -138,6 +138,8 @@ p{
     font-weight: bold;
     flex-grow: 1;
     margin-right: 10px;
+    max-width:700px;
+    overflow:overlay;
 }
 .edit-input {
     width: 75%;
@@ -168,6 +170,11 @@ p{
     .inputStyle {
         padding: 8px 16px;
     }
+    .todo-text{
+        max-width: 300px;
+        overflow:overlay;
+        margin-right:10px;
+    }
     .randomMotivation>img {
         width: 100%;
         max-width: 400px;
@@ -185,6 +192,9 @@ p{
     }
     .todo-text{
         font-size: 1rem;
+        max-width: 117px;
+        overflow:overlay;
+        margin-right:5px;
     }
     .randomMotivation>img {
         max-width: 300px;
@@ -200,9 +210,11 @@ p{
         font-size: 0.8rem;
     }
     .delete-btn{
+        margin-left:5px;
         font-size: 0.7rem;
     }
     .done-btn{
+        margin-right:5px;
         font-size: 0.7rem;
     }
     .change-theme{
