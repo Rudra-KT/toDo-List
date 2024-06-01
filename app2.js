@@ -108,6 +108,7 @@ function removeToDo(li){
 function changeTheme(themeButton){
     const body = document.querySelector("body");
     const buttons = document.querySelectorAll("button");
+    const todoText = document.querySelectorAll("#todoText");
 
     document.querySelectorAll("*").forEach(element => {
         element.classList.toggle("lightText");
@@ -116,9 +117,17 @@ function changeTheme(themeButton){
     if(body.classList.contains("welcomePageLight")){
         body.classList.remove("welcomePageLight");
         body.classList.add("welcomePageDark");
+        todoText.forEach(ele=>{
+            ele.classList.toggle("removedLight");
+            ele.classList.toggle("removedDark");
+        });
     }else{
         body.classList.remove("welcomePageDark");
         body.classList.add("welcomePageLight");
+        todoText.forEach(ele=>{
+            ele.classList.toggle("removedLight");
+            ele.classList.toggle("removedDark");
+        });
     }
     
 }
