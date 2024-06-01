@@ -2,7 +2,7 @@ document.querySelector(".btn").addEventListener("click", function() {
     document.querySelector("body").innerHTML=`
     <div>
     <h1> ToDo List ! </h1>
-    <button class="btn change-theme start-btn btn-lg btn-dark">Theme</button>
+    <button class="btn change-theme-2 start-btn btn-lg btn-dark">Theme</button>
     <input class="inputStyle" type="text" name="todoName" id="todoName" placeholder="New Todo">
     <button class="btn btn-lg btn-dark" id="addToDo">Add todo</button>
     <p class="how-to-edit ml-7"><i>( click on a todo to edit )</i></p>
