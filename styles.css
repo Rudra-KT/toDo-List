@@ -48,10 +48,10 @@ h1{
     margin-bottom: 20px;
 }
 #memeText{
+    font-size:1rem;
     font-family: 'Chakra Petch', sans-serif;
     color: white;
     text-align: center;
-    font-weight: bold;
 }
 #memeHeading{
     font-weight: bold;
