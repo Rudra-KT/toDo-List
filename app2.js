@@ -1,4 +1,4 @@
-document.querySelector(".btn").addEventListener("click", function() {
+document.querySelector(".start-btn").addEventListener("click", function() {
     document.querySelector("body").innerHTML=`
     <div>
     <h1> ToDo List ! </h1>
@@ -9,14 +9,24 @@ document.querySelector(".btn").addEventListener("click", function() {
     <ol id="todos"></ol>
     <div>
 `;
-    document.querySelector("body").classList.add("appTheme");
     document.querySelector("#addToDo").addEventListener("click",addToDo);
     
     document.querySelector(".change-theme").addEventListener("click",function(){
         changeTheme(this);
-    })
+    });
+
+    const body = document.querySelector("body");
+    const inputToDo =  document.querySelector("#todoName");
+
+    if(body.classList.contains("welcomePageDark")){
+        inputToDo.classList.add("lightText");
+    }
+    if(body.classList.contains("welcomePageLight")){
+        inputToDo.classList.remove("lightText");
+    }
 
 });
+
 window.addEventListener("keydown" ,function(key){
     if(key.code=="Enter"){
         addToDo();
@@ -71,6 +81,7 @@ function addToDo() {
 function doneToDo(li){
     const todoText = li.querySelector("#todoText");
     const body = document.querySelector("body");
+
     if(body.classList.contains("welcomePageLight")){
         todoText.classList.toggle("removedLight");
     }else{
@@ -117,11 +128,9 @@ function changeTheme(themeButton){
     const body = document.querySelector("body");
     const buttons = document.querySelectorAll("button");
     const todoText = document.querySelectorAll("#todoText");
+    const inputToDo =  document.querySelector("#todoName");
 
-    document.querySelectorAll("input").forEach(element => {
-        element.classList.toggle("lightText");
-    });
-
+   
     if(body.classList.contains("welcomePageLight")){
         body.classList.remove("welcomePageLight");
         body.classList.add("welcomePageDark");
@@ -131,6 +140,9 @@ function changeTheme(themeButton){
                 ele.classList.toggle("removedDark");
             }
         });
+        if(inputToDo){
+            inputToDo.classList.add("lightText");
+        }
     }else{
         body.classList.remove("welcomePageDark");
         body.classList.add("welcomePageLight");
@@ -140,6 +152,9 @@ function changeTheme(themeButton){
                 ele.classList.toggle("removedDark");
             }
         });
+        if(inputToDo){
+            inputToDo.classList.remove("lightText");
+        }
     }
     
 }
