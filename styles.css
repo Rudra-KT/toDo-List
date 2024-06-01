@@ -1,0 +1,178 @@
+body{
+    padding: 20px;
+    font-family: monospace;
+}
+
+.center{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1{
+    color:hwb(0 100% 0% / 0.961) ;
+    font-weight: bold;
+    font-size: 3.2rem;
+    font-family: 'Silkscreen', cursive;
+}
+
+.welcomePage{
+        --s: 117px; /* control the size*/
+        --c1: #000000;
+        --c2: #bc2020;
+        
+        --_g: #0000 52%,var(--c1) 54% 57%,#0000 59%; 
+        background: 
+         radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
+         radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
+         radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
+         radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
+         var(--c2);
+        background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+}
+
+.container{
+    text-align: center;
+}
+
+/* welcome page image */
+.randomMotivation{
+    text-align: center;
+    margin: 70px auto; 
+}
+.randomMotivation>img{
+    width: 650px;
+    border: 5px solid white;
+    margin-bottom: 20px;
+}
+#memeText{
+    font-family: 'Chakra Petch', sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+#memeHeading{
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    color:white;
+    text-align: center;
+}
+
+
+.btn{
+    border-radius: 30px;
+}
+
+b{
+    font-size: 1.5rem;
+}
+
+/* start todo app button */
+.start-btn{
+    margin-top: 30px;
+}
+
+p{
+    font-family: 'Silkscreen', cursive;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: white;
+}
+.ml-7{
+    margin-left: 7px;
+}
+/* input element styles */
+.inputStyle{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    border-radius: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.422);
+    border: none;
+}
+.inputStyle::placeholder{
+    color: white;
+}
+.inputStyle:focus{
+    outline: none;
+}
+
+
+/* done todo */
+.removed{
+    text-decoration: line-through;
+    text-decoration: line-through #30c430 3px;
+    color:rgba(255, 255, 255, 0.475) !important;
+}
+
+/* todo list styles */
+.todo-item {
+    color: white;
+    font-size: 1.6rem;
+    margin: 15px auto;
+    display: flex;
+    align-items: center;
+    translate: -20px ;
+}
+.todo-text {
+    transition: text-decoration 0.3s ease-in-out; 
+    color : white;
+    font-weight: bold;
+    flex-grow: 1;
+}
+.edit-input {
+    width: 75%;
+    margin: 0;
+}
+
+/* delete todo button */
+.delete-btn{
+    margin-left: 10px;
+    font-size: 1.1rem;
+}
+/* mark as done todo button */
+.done-btn{
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .randomMotivation>img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 550px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .randomMotivation>img {
+        max-width: 300px;
+    }
+
+    .inputStyle {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+}
