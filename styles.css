@@ -169,11 +169,14 @@ p{
     }
 
     .inputStyle {
-        font-size: 1.2rem;
-        padding: 8px;
+        font-size: 1rem;
+        padding: 6px;
     }
 
     .btn {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+    .how-to-edit{
+        font-size: 0.6rem;
     }
 }
