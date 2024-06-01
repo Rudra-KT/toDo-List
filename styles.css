@@ -66,6 +66,7 @@ h1{
     text-align: center;
 }
 #memeHeading{
+    font-size:2rem;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Chakra Petch', sans-serif;
