@@ -179,7 +179,7 @@ p{
 
 @media (max-width: 550px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
     .todo-text{
         font-size: 1rem;
@@ -187,7 +187,9 @@ p{
     .randomMotivation>img {
         max-width: 300px;
     }
-
+    #memeHeading{
+        font-size:1.6rem;
+    }
     .inputStyle {
         font-size: 1rem;
         padding: 6px;
@@ -201,6 +203,11 @@ p{
     }
     .done-btn{
         font-size: 0.7rem;
+    }
+    .change-theme{
+        position: absolute;
+        top: 5px ;
+        right : 40px;
     }
     .how-to-edit{
         font-size: 0.6rem;
