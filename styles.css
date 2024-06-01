@@ -166,7 +166,9 @@ p{
     h1 {
         font-size: 2.5rem;
     }
-
+    .inputStyle {
+        padding: 8px 16px;
+    }
     .randomMotivation>img {
         width: 100%;
         max-width: 400px;
@@ -193,7 +195,7 @@ p{
     }
     .inputStyle {
         font-size: 1rem;
-        padding: 6px;
+        padding: 6px 12px;
     }
     .btn {
         font-size: 0.8rem;
