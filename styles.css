@@ -12,25 +12,24 @@ body{
 
 
 h1{
-    color:hwb(0 100% 0% / 0.961) ;
+    color:hwb(0 0% 100% / 0.961) ;
     font-weight: bold;
     font-size: 2.2rem;
     font-family: 'Silkscreen', cursive;
 }
 
 .welcomePage{
-        --s: 117px; /* control the size*/
-        --c1: #000000;
-        --c2: #bc2020;
+        --s: 60px; /* control the size*/
+        --c1: #f1e5d1;
+        --c2: #dbb5b5;
         
-        --_g: #0000 52%,var(--c1) 54% 57%,#0000 59%; 
-        background: 
-         radial-gradient(farthest-side at -33.33% 50%,var(--_g)) 0 calc(var(--s)/2),
-         radial-gradient(farthest-side at 50% 133.33%,var(--_g)) calc(var(--s)/2) 0,
-         radial-gradient(farthest-side at 133.33% 50%,var(--_g)),
-         radial-gradient(farthest-side at 50% -33.33%,var(--_g)),
-         var(--c2);
-        background-size: calc(var(--s)/4.667) var(--s),var(--s) calc(var(--s)/4.667);
+        --c:var(--c1) 0 25%,#0000 0;
+        --p:0 0/calc(3*var(--s)) calc(2*var(--s));
+        background:
+          conic-gradient(from -45deg at 75% 62.5%,var(--c)) var(--p),
+          conic-gradient(from 135deg at 25% 37.5%,var(--c)) var(--p),
+          repeating-conic-gradient(from 90deg,var(--c),var(--c2) 0 50%)
+           0 0/var(--s) var(--s);
 }
 
 .container{
@@ -50,14 +49,14 @@ h1{
 #memeText{
     font-size: 1rem;
     font-family: 'Chakra Petch', sans-serif;
-    color: white;
+    color: black;
     text-align: center;
 }
 #memeHeading{
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Chakra Petch', sans-serif;
-    color:white;
+    color:black;
     text-align: center;
 }
 
@@ -79,7 +78,7 @@ p{
     font-family: 'Silkscreen', cursive;
     font-weight: bold;
     font-size: 0.6rem;
-    color: white;
+    color: black;
 }
 .ml-7{
     margin-left: 7px;
@@ -97,7 +96,7 @@ p{
     border: none;
 }
 .inputStyle::placeholder{
-    color: white;
+    color: black;
 }
 .inputStyle:focus{
     outline: none;
@@ -107,13 +106,13 @@ p{
 /* done todo */
 .removed{
     text-decoration: line-through;
-    text-decoration: line-through #30c430 3px;
-    color:rgba(255, 255, 255, 0.475) !important;
+    text-decoration: line-through #dbb5b5e0 3px;
+    color:rgba(0, 0, 0, 0.368) !important;
 }
 
 /* todo list styles */
 .todo-item {
-    color: white;
+    color: black;
     font-size: 1.2rem;
     margin: 15px auto;
     display: flex;
@@ -122,7 +121,7 @@ p{
 }
 .todo-text {
     transition: text-decoration 0.3s ease-in-out; 
-    color : white;
+    color : black;
     font-weight: bold;
     flex-grow: 1;
     margin-right: 10px;
