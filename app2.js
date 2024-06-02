@@ -1,3 +1,55 @@
+// CODE FOR GENERATING WELCOME PAGE MEMES
+
+window.addEventListener('load', displayRandomMeme);
+const memes = [
+    {
+      image: './images/daenerys.jpeg',
+      heading: 'THAT SPECIAL moment',
+      text: 'When you find the perfect avocado 🥑 at the supermarket',
+    },
+    {
+      image: './images/anime.jpg',
+      heading: '🚀CHASE YOUR DREAMS LIKE YOUR FAVORITE ANIME HERO 🚀',
+      text: 'The journey may be tough, but it\'s your determination that makes the difference ',
+    },
+    {
+        image: './images/nike.jpg',
+        heading: 'JUST DO IT 👟',
+        text: 'Don\'t wait for the perfect moment take the moment and make it perfect',
+      } ,
+      {
+        image: './images/gintama.jpg',
+        heading: 'Life is basically like a soap bubble 🫧 ',
+        text: 'It rides on the wind, flying here and there ... And before you realize it, pop! It\'s gone',
+      },
+      {
+        image: './images/banana.jpg',
+        heading: 'My mother always used to say ',
+        text: 'The older you get, the better you get, unless you\'re a banana',
+      },
+      {
+        image: './images/cat.jpg',
+        heading: 'Cats are smarter than dogs ',
+        text: 'You can\'t get eight cats to pull a sled through snow',
+      }
+  ];
+
+  function displayRandomMeme() {
+    const memeHeading = document.getElementById('memeHeading');
+    const memeText = document.getElementById('memeText');
+
+    const randomIndex = Math.floor(Math.random() * memes.length);
+    const randomMeme = memes[randomIndex];
+
+
+    document.querySelector('.randomMotivation>img').src=`${randomMeme.image}`;
+    memeHeading.textContent = randomMeme.heading;
+  
+    memeText.textContent = randomMeme.text;
+  }
+
+//CHANGE THE HTML TO START THE TODO APP
+
 document.querySelector(".start-btn").addEventListener("click", function() {
     document.querySelector("body").innerHTML=`
     <div>
@@ -76,7 +128,6 @@ function addToDo() {
         document.querySelector("#todoName").value = "";
     }
 }
-
 
 function doneToDo(li){
     const todoText = li.querySelector("#todoText");
@@ -159,56 +210,5 @@ function changeTheme(themeButton){
     
 }
 
-
-// CODE FOR GENERATING WELCOME PAGE MEMES
-
-const memes = [
-    {
-      image: './images/daenerys.jpeg',
-      heading: 'THAT SPECIAL moment',
-      text: 'When you find the perfect avocado 🥑 at the supermarket',
-    },
-    {
-      image: './images/anime.jpg',
-      heading: '🚀CHASE YOUR DREAMS LIKE YOUR FAVORITE ANIME HERO 🚀',
-      text: 'The journey may be tough, but it\'s your determination that makes the difference ',
-    },
-    {
-        image: './images/nike.jpg',
-        heading: 'JUST DO IT 👟',
-        text: 'Don\'t wait for the perfect moment take the moment and make it perfect',
-      } ,
-      {
-        image: './images/gintama.jpg',
-        heading: 'Life is basically like a soap bubble 🫧 ',
-        text: 'It rides on the wind, flying here and there ... And before you realize it, pop! It\'s gone',
-      },
-      {
-        image: './images/banana.jpg',
-        heading: 'My mother always used to say ',
-        text: 'The older you get, the better you get, unless you\'re a banana',
-      },
-      {
-        image: './images/cat.jpg',
-        heading: 'Cats are smarter than dogs ',
-        text: 'You can\'t get eight cats to pull a sled through snow',
-      }
-  ];
-
-  function displayRandomMeme() {
-    const memeHeading = document.getElementById('memeHeading');
-    const memeText = document.getElementById('memeText');
-
-    const randomIndex = Math.floor(Math.random() * memes.length);
-    const randomMeme = memes[randomIndex];
-
-
-    document.querySelector('.randomMotivation>img').src=`${randomMeme.image}`;
-    memeHeading.textContent = randomMeme.heading;
-  
-    memeText.textContent = randomMeme.text;
-  }
-
-  window.addEventListener('load', displayRandomMeme);
   
   
