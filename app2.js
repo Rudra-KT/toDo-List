@@ -161,12 +161,21 @@ function editTodo(todoText){
     
     input.addEventListener("keydown",function(evt){
         if(evt.code==="Enter"){
-            todoText.innerHTML=input.value;
+            if(input.value){
+                todoText.innerHTML=input.value;
+            }else{
+                todoText.nextElementSibling.nextElementSibling.click();
+            }
+            
         }
     });
 
     input.addEventListener("blur", function() {
-        todoText.innerHTML = input.value;
+        if(input.value){
+            todoText.innerHTML=input.value;
+        }else{
+            todoText.nextElementSibling.nextElementSibling.click();
+        }
     });
 
 }
